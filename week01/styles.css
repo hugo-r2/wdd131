@@ -1,0 +1,48 @@
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+
+header,
+footer {
+
+    background-color: darkslategray;
+    color: white;
+}
+
+header {
+    padding-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#header-txt {
+    margin-bottom: 50px;
+}
+
+p {
+    padding-left: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-bottom: 30%;
+}
+
+#main {
+    background-color: lightgray;
+    grid-column: 1/2;
+    margin-bottom: -40%;
+    z-index: -1;
+}
+
+#aside {
+    grid-column: 2/3;
+}
