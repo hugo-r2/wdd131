@@ -29,7 +29,8 @@ body {
 h1,
 h2,
 h3 {
-    font-family: Amita;
+    font-family: Amita, Helvetica, sans-serif;
+    ;
 }
 
 header,
