@@ -2,13 +2,77 @@
 <html lang="en">
 
 <head>
+    <script src="scripts/getdates.js" defer></script>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/base.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Hugo Reyes">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Hugo Reyes, This site contains a brief summary about myself.">
+    <title>WDD 131 - Dynamic Web Fundamentals - Hugo Reyes</title>
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <h1>Probando 1, 2, 3</h1>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals - Hugo Reyes</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/hugo-isaac-reyes-reyes-ba174a205/5">LinkedIn</a>
+            <a href="https://byui.instructure.com/">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p14#p14">My
+                Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card" id="card1">
+
+            <h2>About Me</h2>
+            <img src="images/picture_myself.jpeg" alt="Hugo Reyes" id="my_pic">
+            <p>
+                My name is Hugo Reyes. I was born in Guatemala City, and I currently live there. I am
+                currently
+                working
+                as a Customer Service Representative in a Call Center for US customers. I just got married to the
+                love
+                of my life, and I love spending time together. We enjoy wantching movies ans playing video games
+                together.
+            </p>
+
+            <div id="flag_img">
+                <img src="images/bandera_guate.png" alt="Guatemala Flag">
+                <h5>Guatemala Official Flag</h5>
+            </div>
+            <h3 id="country_ttl">Guatemala City, Guatemala</h3>
+            <p id="country_info">Guatemala is a Central American country, that is right below Mexico. It is known for
+                its beautiful
+                landscapes and being a big part of the home of the Mayan culture. The mayan ruins are very famous
+                tourist places, and we still have some mayan influence in our language and some traditions.</p>
+
+        </section>
+
+        <section class="card" id="card2">
+            <h2>Web Dev Resources</h2>
+            <menu>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://validator.w3.org/#validate_by_input">HTML Validation</a> </li>
+                <li><a href="https://developer.mozilla.org/">mdn_ Resources</a></li>
+            </menu>
+        </section>
+
+    </main>
+
+    <footer>
+        <p id="footer_name">
+            &copy;
+            <span id="year"></span>
+            || Hugo Reyes || Guatemala City
+        </p>
+
+        <p id="last_modified"></p>
+
+    </footer>
 
 </body>
 
