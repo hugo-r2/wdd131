@@ -21,12 +21,13 @@
         grid-row: 1/2;
     }
 
-    .weather_large {
+    .weather_title {
         display: inline;
     }
 
-    .weather_small {
-        display: none;
+    .weather_title::after {
+        content: "⛅";
+        width: 300px;
     }
 
     .weather_icon {
