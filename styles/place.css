@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Metrophobic&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    font-family: Inder;
+}
+
+section {
+    margin: 20px auto;
+}
+
+td {
+    font-family: Metrophobic;
+}
+
+.pana_img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+header,
+footer {
+    padding: 15px;
+    text-align: center;
+    background-color: #b5e2fa;
+}
+
+.table_bold {
+    text-align: right;
+    font-weight: bold;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.data_table,
+.weather_table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.weather_large {
+    display: none;
+}
+
+.weather_icon {
+    display: block;
+    margin: 5px auto;
+    max-width: 80px;
+
+}

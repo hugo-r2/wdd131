@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="scripts/place.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <meta name="author" content="Hugo Reyes">
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Hugo Reyes, This site contains information about Atitlán in Guatemala.">
+    <title>WDD 131 - Place - Hugo Reyes</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Atitlán</h1>
+    </header>
+
+    <main>
+
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 700px)" srcset="images/lago.webp" class="pana_img">
+                <source media="(min-width: 500px)" srcset="images/lago_medium.webp" class="pana_img">
+                <img src="images/pana_low.webp" alt="Lago de Atitlán" class="pana_img">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data:</h2>
+            <div class="data_table">
+                <table>
+
+                    <tr>
+                        <td class="table_bold">Area:</td>
+                        <td>130.1 sq KM</td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="table_bold">Population:</td>
+                        <td>49,631</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Languages:</td>
+                        <td>Spanish</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Currency:</td>
+                        <td>Quetzal</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Time Zone:</td>
+                        <td>GMT-6</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Calling Code:</td>
+                        <td>+502</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Internet TLD:</td>
+                        <td>.gt</td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="weather">
+            <h2 class="weather_large">Weather: ⛅</h2>
+            <h2 class="weather_small">Weather: </h2>
+            <img src="images/cloudy_icon.webp" alt="Cloudy Icon" class="weather_icon">
+            <div class="weather_table">
+                <table>
+
+                    <tr>
+                        <td class="table_bold">Temperature:</td>
+                        <td>18°C</td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="table_bold">Conditions: </td>
+                        <td>Cloudy</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Wind: </td>
+                        <td>5 Mph</td>
+                    </tr>
+
+                    <tr>
+                        <td class="table_bold">Wind Chill: </td>
+                        <td id="windchill_data"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        <p id="footer_name">
+            &copy;
+            <span id="year"></span>
+            || Hugo Reyes || Guatemala City
+        </p>
+
+        <p id="last_modified"></p>
+
+    </footer>
+
+</body>
+
+</html>
