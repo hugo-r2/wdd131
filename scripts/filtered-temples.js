@@ -11,10 +11,22 @@ document.getElementById("last_modified").textContent = "Last Modified: " + forma
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('nav');
 
+
+
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
 });
+
+
+
+const albumContainer = document.querySelector(".album");
+const oldMenu = document.getElementById("old")
+const home_ = document.getElementById("home");
+const newt = document.getElementById("new");
+const large = document.getElementById("large");
+const small = document.getElementById("small");
+const titlePage = document.getElementById("titlePage");
 
 
 
@@ -93,60 +105,101 @@ const temples = [
     },
 ];
 
-function createTempleCard(templeList) {
-    document.querySelector("#temple-img").innerHTML = "";
-    templeList.forEach(temple => {
-        let card = document.createElement("section");
-        let name = document.createElement("h3");
-        let location = document.createElement("p");
-        let dedication = document.createElement("p");
-        let area = document.createElement("p");
-        let img = document.createElement("img");
+function displayTemplesAlbum(templeObject) {
 
-        name.textContent = temple.templeName;
-        location.innerHTML = `<span class="label">Location: <span>${temple.location}`;
-        dedication.innerHTML = `<span class="label">Dedicated: <span>${temple.dedicated}`;
-        area.innerHTML = `<span class="label">Size: <span>${temple.area} sq ft`;
-        img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "400");
-        img.setAttribute("height", "250");
+    templeObject.forEach(index => {
 
-        card.setAttribute("id", "temple-card")
-        card.appendChild(name);
-        card.appendChild(location);
-        card.appendChild(dedication);
-        card.appendChild(area);
-        card.appendChild(img);
 
-        document.querySelector("#temple-img").appendChild(card);
+        const slot = document.createElement("section");
+        slot.setAttribute("class", "slots");
+
+        const nameTemple = document.createElement("h3");
+        nameTemple.setAttribute("class", "titleTemple");
+        nameTemple.textContent = `${index.templeName}`;
+
+        const locationTemple = document.createElement("p");
+        locationTemple.textContent = `Location: ${index.location}`;
+
+        const dedicatedDate = document.createElement("p");
+        dedicatedDate.textContent = `Dedicated: ${index.dedicated}`;
+
+        const sizeTemple = document.createElement("p");
+        sizeTemple.textContent = `Size: ${index.area}`;
+
+        const imgTemple = document.createElement("img");
+        imgTemple.setAttribute("src", index.imageUrl);
+        imgTemple.setAttribute("alt", `temple ${index.nameTemple}`);
+        imgTemple.setAttribute("loading", "lazy");
+
+        slot.appendChild(nameTemple);
+        slot.appendChild(locationTemple);
+        slot.appendChild(dedicatedDate);
+        slot.appendChild(sizeTemple);
+        slot.appendChild(imgTemple);
+
+        albumContainer.append(slot);
+
     });
+
 }
 
-const homeFilter = document.querySelector("#home-button");
-homeFilter.addEventListener("click", () => {
-    createTempleCard(temples);
-});
 
-const oldFilter = document.querySelector("#old-button");
-oldFilter.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => Number(temple.dedicated.slice(0, 4)) < 1900));
-});
 
-const newFilter = document.querySelector("#new-button");
-newFilter.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => Number(temple.dedicated.slice(0, 4)) > 2000));
-});
+displayTemplesAlbum(temples);
 
-const largeFilter = document.querySelector("#large-button");
-largeFilter.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area > 90000));
-});
 
-const smallFilter = document.querySelector("#small-button");
-smallFilter.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area < 10000))
-})
+//Home Button
+function hom() {
+    albumContainer.innerHTML = "";
+    displayTemplesAlbum(temples);
+    titlePage.textContent = "Home";
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
+}
 
-createTempleCard(temples);
+//New Button
+function newf() {
+    albumContainer.innerHTML = "";
+    const newTEmples = temples.filter(temple => Number(temple.dedicated.substring(0, 4)) > 2000);
+    displayTemplesAlbum(newTEmples);
+    titlePage.textContent = "New";
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
+}
+
+//Oldest Temples.
+function oldest() {
+    const oldTEmples = temples.filter(temple => Number(temple.dedicated.substring(0, 4)) < 1900);
+    albumContainer.innerHTML = "";
+    displayTemplesAlbum(oldTEmples);
+    titlePage.textContent = "Old";
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
+}
+
+//Large Temples.
+function largert() {
+    const largTEmples = temples.filter(temple => temple.area > 90000);
+    albumContainer.innerHTML = "";
+    displayTemplesAlbum(largTEmples);
+    titlePage.textContent = "Large";
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
+}
+
+//Small Temples.
+function smallt() {
+    const smallTEmples = temples.filter(temples => temples.area < 10000);
+    albumContainer.innerHTML = "";
+    displayTemplesAlbum(smallTEmples);
+    titlePage.textContent = "Small";
+    navigation.classList.toggle('open');
+    hamButton.classList.toggle('open');
+}
+
+
+oldMenu.addEventListener("click", oldest);
+home_.addEventListener("click", hom);
+newt.addEventListener("click", newf);
+large.addEventListener("click", largert);
+small.addEventListener("click", smallt);
