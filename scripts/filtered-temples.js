@@ -148,7 +148,6 @@ function displayTemplesAlbum(templeObject) {
 displayTemplesAlbum(temples);
 
 
-//Home Button
 function hom() {
     albumContainer.innerHTML = "";
     displayTemplesAlbum(temples);
@@ -157,7 +156,6 @@ function hom() {
     hamButton.classList.toggle('open');
 }
 
-//New Button
 function newf() {
     albumContainer.innerHTML = "";
     const newTEmples = temples.filter(temple => Number(temple.dedicated.substring(0, 4)) > 2000);
@@ -167,7 +165,6 @@ function newf() {
     hamButton.classList.toggle('open');
 }
 
-//Oldest Temples.
 function oldest() {
     const oldTEmples = temples.filter(temple => Number(temple.dedicated.substring(0, 4)) < 1900);
     albumContainer.innerHTML = "";
@@ -177,7 +174,6 @@ function oldest() {
     hamButton.classList.toggle('open');
 }
 
-//Large Temples.
 function largert() {
     const largTEmples = temples.filter(temple => temple.area > 90000);
     albumContainer.innerHTML = "";
@@ -187,7 +183,6 @@ function largert() {
     hamButton.classList.toggle('open');
 }
 
-//Small Temples.
 function smallt() {
     const smallTEmples = temples.filter(temples => temples.area < 10000);
     albumContainer.innerHTML = "";
