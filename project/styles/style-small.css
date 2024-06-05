@@ -6,6 +6,12 @@
 
 @media screen and (max-width: 700px) {
 
+    header {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     #menu {
         display: block;
         font-size: 2rem;
@@ -68,6 +74,15 @@
         max-width: 250px;
     }
 
+    .location-right,
+    .location-left {
+        max-width: 270px;
+    }
+
+    #locations-title {
+        text-align: center;
+    }
+
     .magic-places {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -118,7 +133,7 @@
         grid-column: 1/2;
         grid-row: 5/6;
         padding-top: 7%;
-        text-align: left;
+        text-align: center;
     }
 
     #pana-pic {
@@ -136,6 +151,55 @@
     #quirigua-pic {
         grid-column: 1/2;
         grid-row: 8/9;
+    }
+
+    .faqs-main {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .faqs-pic-left,
+    .faqs-pic-right {
+        display: none;
+    }
+
+    .faqs-pic-right1,
+    .faqs-pic-left1 {
+        display: block;
+        max-width: 90%;
+    }
+
+    #pre-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pre-footer-text {
+        font-size: 2em;
+        grid-column: 1/2;
+        text-align: center;
+    }
+
+    #contact-us-button {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+        background-color: #FFE45E;
+        color: #03045e;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 15px 30px;
+        margin-top: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+        border-radius: 5px;
+        max-width: 150px;
+        max-height: 25px;
     }
 
 

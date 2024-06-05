@@ -94,9 +94,9 @@ footer {
     color: black;
     padding: 25px 50px;
     margin-top: 200px;
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 footer a {
@@ -261,7 +261,7 @@ h2 {
 
 #main-text {
     display: grid;
-    grid-template-columns: 26% 1fr 26%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     margin-top: 20px;
 }
@@ -318,14 +318,22 @@ h2 {
 .location-right,
 .location-left {
     border: 10px solid white;
+    margin-top: 15%;
     box-shadow: 5px 5px 10px black;
-    max-width: 385px;
+    max-width: 80%;
 }
 
 .faqs-pic-right,
-.faqs-pic-left {
+.faqs-pic-left,
+.faqs-pic-right1,
+.faqs-pic-left1 {
     box-shadow: 5px 5px 10px black;
     max-width: 300px;
+}
+
+.faqs-pic-right1,
+.faqs-pic-left1 {
+    display: none;
 }
 
 .faqs-pic-left {
