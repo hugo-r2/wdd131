@@ -1,70 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Handlee&display=swap');
 
+
+
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
+    font-size: 100%;
 
-}
-
-header {
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr;
-
-}
-
-#menu {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    padding: .5rem .75rem;
-    background-color: #eee;
-    color: #000;
-    grid-column: span 3;
-}
-
-#menu::before {
-    content: "≡";
 }
 
 .navigation {
-    list-style: none;
-    margin: 0 auto;
-    max-width: 760px;
+    display: flex;
+    font-size: 90%;
+    padding-left: 0px;
 }
 
 .navigation li {
-    display: none;
+    display: block;
+    flex: 1 1 100%;
 }
 
 .navigation a {
-    display: block;
-    padding: 0.75rem;
-    text-align: left;
-    text-decoration: none;
+    text-align: center;
     color: black;
-    font-weight: 700;
-    transition: 0.5s;
-    font-size: clamp(1rem, 2vmin, 1.5rem);
+    text-decoration: none;
+    padding: 10px;
 }
 
-.navigation a:hover,
-navigation a:active {
-    color: white;
+#menu {
+    display: none;
+}
+
+nav a:hover {
     background-color: #5AA9E6;
+    color: white;
+
 }
 
-.show li {
-    display: block;
-}
-
-#menu.show::before {
-    content: "X";
+nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 .logo {
-    width: 80em;
+    width: 80px;
 }
 
 #logo_link {
@@ -73,21 +53,23 @@ navigation a:active {
     align-self: center;
 }
 
-
 .magic-places,
 .beautiful-villages {
-    margin-top: 50px;
+    margin-top: 175px;
     margin-bottom: 50px;
 }
 
 .card-img {
-    width: 100%;
-    max-width: 350px;
     border: 10px solid #FFE45E;
     box-shadow: 5px 5px 10px black;
 }
 
-main section {
+#cards-title {
+    padding-top: 50px;
+}
+
+main section,
+h1 {
     text-align: center;
 }
 
@@ -99,10 +81,10 @@ body {
     padding: 0;
 }
 
-
-
-#website-title {
-    font-size: 75%;
+header {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 150px 1fr 2fr;
 }
 
 
@@ -112,15 +94,28 @@ footer {
     color: black;
     padding: 25px 50px;
     margin-top: 200px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    background-color: #5AA9E6;
+    color: white;
 }
 
 
 .home-title {
     color: #FFE45E;
     font-family: Amita, Helvetica, sans-serif;
-    font-size: 3em;
-    margin-top: 10px;
+    font-size: 2.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
@@ -144,11 +139,17 @@ h2 {
     color: white
 }
 
-#hero-img,
+.hero-img,
 #locations-main-pic,
 #faqs-main-pic,
 #footer-img {
     width: 100%;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -65px;
 }
 
 #hero-secondary {
@@ -175,6 +176,8 @@ h2 {
 
 #hero-subtitle {
     color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
@@ -189,16 +192,31 @@ h2 {
 
 .home-main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    margin-top: -100px;
 }
 
-#main-title {
-    font-size: 2.5em;
+.card-img {
+    width: 100%;
+    max-width: 350px;
 }
 
 #places-card-title {
-    grid-column: span 5;
-    text-align: center;
+    grid-column: span 1/5;
+}
+
+.magic-places {
+    grid-column: 2/3;
+}
+
+.beautiful-villages {
+    grid-column: 4/5;
+}
+
+
+
+#main-title {
+    font-size: 2.5em;
 }
 
 .main-message {
@@ -354,6 +372,7 @@ h2 {
     min-width: 300px;
 }
 
+/* Style the input fields */
 input {
     padding: 10px;
     width: 100%;
@@ -362,15 +381,17 @@ input {
     border: 1px solid #aaaaaa;
 }
 
+/* Mark input boxes that gets an error on validation: */
 input.invalid {
     background-color: #ffdddd;
 }
 
-
+/* Hide all steps by default: */
 .tab {
     display: none;
 }
 
+/* Make circles that indicate the steps of the form: */
 .step {
     height: 15px;
     width: 15px;
@@ -382,10 +403,12 @@ input.invalid {
     opacity: 0.5;
 }
 
+/* Mark the active step: */
 .step.active {
     opacity: 1;
 }
 
+/* Mark the steps that are finished and valid: */
 .step.finish {
     background-color: #04AA6D;
 }

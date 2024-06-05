@@ -1,0 +1,76 @@
+@media screen and (max-width: 800px) {
+    #website-title {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    #menu {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        background-color: #eee;
+        color: #000;
+        grid-column: span 3;
+    }
+
+    #menu::before {
+        content: "≡";
+    }
+
+    .navigation {
+        flex-direction: column;
+        list-style: none;
+        margin: 0 auto;
+        max-width: 760px;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.75rem;
+        text-align: left;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        transition: 0.5s;
+        font-size: clamp(1rem, 2vmin, 1.5rem);
+    }
+
+    .navigation a:hover,
+    navigation a:active {
+        color: white;
+        background-color: #5AA9E6;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
+    .home-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: -100px;
+    }
+
+    .magic-places {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .beautiful-villages {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+}
