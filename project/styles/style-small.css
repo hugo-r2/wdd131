@@ -64,6 +64,10 @@
         margin-top: -100px;
     }
 
+    .card-img {
+        max-width: 250px;
+    }
+
     .magic-places {
         grid-column: 1/2;
         grid-row: 1/2;
@@ -77,4 +81,62 @@
     .logo {
         display: none;
     }
+
+    #main-text {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin-top: 20px;
+    }
+
+    #san-jose-text {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding-top: 7%;
+        text-align: center;
+    }
+
+    #san-jose-pic {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #antigua-text {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-top: 7%;
+        text-align: center;
+    }
+
+    #antigua-pic {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+
+    #pana-text {
+        grid-column: 1/2;
+        grid-row: 5/6;
+        padding-top: 7%;
+        text-align: left;
+    }
+
+    #pana-pic {
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+
+    #quirigua-text {
+        grid-column: 1/2;
+        grid-row: 7/8;
+        padding-top: 7%;
+        text-align: center;
+    }
+
+    #quirigua-pic {
+        grid-column: 1/2;
+        grid-row: 8/9;
+    }
+
+
 }
