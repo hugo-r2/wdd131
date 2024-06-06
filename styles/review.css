@@ -1,0 +1,66 @@
+:root {
+
+    --principal-font: "Handlee", sans-serif;
+    --background: #BCE0FF;
+    --header-footer-color: white;
+    --button-color: #03045e;
+    --optionalcolor: #FFE45E;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+}
+
+main {
+    text-align: justify;
+    max-width: 100%;
+    margin-top: 0;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    font-family: var(--principal-font);
+}
+
+
+header {
+    max-width: 100%;
+    background-color: var(--header-footer-color);
+    color: black;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    padding: 1rem;
+}
+
+footer {
+    max-width: 100%;
+    background-color: var(--header-footer-color);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+#count,
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+div {
+    text-align: center;
+}

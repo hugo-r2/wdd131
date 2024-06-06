@@ -1,0 +1,66 @@
+@media screen and (min-width: 640px) {
+
+    :root {
+
+        --principal-font: "Handlee", sans-serif;
+        --background: #BCE0FF;
+        --header-footer-color: white;
+        --button-color: #03045e;
+        --optionalcolor: #FFE45E;
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+        display: none;
+        position: relative;
+        caret-color: black;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: center;
+    }
+
+    .stars>label {
+        color: #03045e;
+        width: 50px;
+        height: 50px;
+        font-size: 80px;
+        margin-left: 55px;
+        display: flex;
+        align-items: center;
+        caret-color: #03045e;
+        text-align: center;
+    }
+
+    .stars>label:hover {
+        color: #7FC8F8;
+    }
+
+    .stars>label::before {
+        content: "\2606";
+    }
+
+    .stars input:checked~label::before {
+        content: "\2605";
+    }
+
+
+    form {
+        max-width: 60%;
+        margin: 0 auto
+    }
+
+    main {
+        justify-items: center;
+    }
+
+
+}
