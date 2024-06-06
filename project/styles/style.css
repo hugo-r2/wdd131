@@ -381,6 +381,49 @@ h2 {
     max-height: 25px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #BCE0FF;
+}
+
+.label {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+#visits {
+    color: #03045e;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+main.reviewed {
+    width: 400px;
+    height: 300px;
+    color: #03045e;
+    background-color: #7FC8F8;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4.5em;
+    margin-top: 10rem;
+}
 
 
 
