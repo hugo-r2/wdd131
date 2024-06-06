@@ -384,7 +384,7 @@ h2 {
 
 
 
-/* Style the form */
+/* Form Style */
 #regForm {
     background-color: #ffffff;
     margin: 100px auto;
@@ -393,7 +393,7 @@ h2 {
     min-width: 300px;
 }
 
-/* Style the input fields */
+
 input {
     padding: 10px;
     width: 100%;
@@ -402,17 +402,15 @@ input {
     border: 1px solid #aaaaaa;
 }
 
-/* Mark input boxes that gets an error on validation: */
+
 input.invalid {
     background-color: #ffdddd;
 }
 
-/* Hide all steps by default: */
 .tab {
     display: none;
 }
 
-/* Make circles that indicate the steps of the form: */
 .step {
     height: 15px;
     width: 15px;
@@ -424,12 +422,12 @@ input.invalid {
     opacity: 0.5;
 }
 
-/* Mark the active step: */
+
 .step.active {
     opacity: 1;
 }
 
-/* Mark the steps that are finished and valid: */
+
 .step.finish {
     background-color: #04AA6D;
 }
