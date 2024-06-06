@@ -1,18 +1,11 @@
-const year = document.querySelector("#year");
-const today = new Date();
-let last_date = new Date(document.lastModified);
-let options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-let formatdate = last_date.toLocaleDateString('en-EN', options);
 
-
-const textCount = document.getElementById("count");
-
-let countLocalStorage = Number(window.localStorage.getItem("countingForm")) || 0;
-
-
-
-function sumLocalStorage() {
-    countLocalStorage++;
-    window.localStorage.setItem("countingForm", countLocalStorage);
-    textCount.textContent = `Thanks! this was your ${countLocalStorage} time`;
+const visitsDisplay = document.querySelector(".visits");
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+if (numVisits !== 0) {
+    visitsDisplay.textContent = numVisits;
+} else {
+    visitsDisplay.textContent = `This is your first visit. Welcome!`;
+}
+numVisits++;
+window.localStorage.setItem("numVisits-ls", numVisits);
 }

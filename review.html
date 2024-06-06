@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
+    <link href="styles/review.css" type="text/css" rel="stylesheet">
+    <script src="scripts/review.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hugo Reyes">
     <meta name="description"
         content="WDD 131 - Dynamic Web Fundamentals, Hugo Reyes, This site contains an example of a form.">
     <title>WDD 131 - Form</title>
-    <link href="styles/review.css" type="text/css" rel="stylesheet">
-    <script src="scripts/review.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,10 @@
 </head>
 
 <body>
-    <header>
-        <h1>Product Review</h1>
-    </header>
-    <main>
-        <h2>Thank you for your answer!</h2>
-        <p id="count"></p>
-        <div>
-            <a href="https://hugo-r2.github.io/wdd131/form.html">
-                <button action>Go Back</button>
-            </a>
-        </div>
+    <main class="reviewed">
+        <H1>Thank you for your Answer!</H1>
+        <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
     </main>
-    <footer>
-        <p id="footer_name">
-            &copy;
-            <span id="year"></span>
-            || Hugo Reyes || Guatemala City
-        </p>
-
-        <p id="last_modified"></p>
-    </footer>
 </body>
 
 </html>

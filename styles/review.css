@@ -1,66 +1,43 @@
-:root {
-
-    --principal-font: "Handlee", sans-serif;
-    --background: #BCE0FF;
-    --header-footer-color: white;
-    --button-color: #03045e;
-    --optionalcolor: #FFE45E;
-
-}
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: xx-large;
+}
+
 body {
-    background-color: var(--background);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #BCE0FF;
 }
 
-main {
-    text-align: justify;
-    max-width: 100%;
-    margin-top: 0;
-    border: 1px solid #bbb;
-    padding: 1rem;
-    font-family: var(--principal-font);
+.label {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
 }
 
+#visits {
+    color: navy;
+    font-weight: bolder;
+    font-size: larger;
+}
 
-header {
-    max-width: 100%;
-    background-color: var(--header-footer-color);
-    color: black;
+main.reviewed {
+    width: 400px;
+    height: 300px;
+    color: #03045e;
+    background-color: #7FC8F8;
+    border: 2px solid black;
+    border-radius: 10px;
     text-align: center;
-    top: 0;
-    width: 100%;
-    margin-top: 0;
-    padding: 1rem;
-}
-
-footer {
-    max-width: 100%;
-    background-color: var(--header-footer-color);
-    color: black;
-    padding: 20px;
-    text-align: center;
-    bottom: 0;
-    width: 100%;
-}
-
-#count,
-h2 {
-    font-size: 50px;
-    text-align: center;
-}
-
-button {
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-}
-
-div {
-    text-align: center;
+    padding: 4.5em;
+    margin-top: 10rem;
 }
